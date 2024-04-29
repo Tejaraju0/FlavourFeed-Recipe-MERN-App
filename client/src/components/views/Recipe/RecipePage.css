@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.recipe-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.recipe-image {
+  width: 500px;
+  height: 600px;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details {
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #FF8C00;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ingredient-list {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.ingredient {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.cooking-instructions {
+  text-align: left;
+  animation: fadeIn 1s ease;
+}
+
+.instruction-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.instruction-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF8C00;
+}
+
+.instruction-text {
+  font-size: 20px;
+  color: #666;
+}
+
+.add-to-favorites-form {
+  margin-top: 20px;
+}
+
+.add-to-favorites-btn {
+  background-color: #FF8C00;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-favorites-btn:hover {
+  background-color: #FFA500;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

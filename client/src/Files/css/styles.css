@@ -1,0 +1,458 @@
+:root {
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+.container-xxl { 
+  max-width: 93%; 
+}
+  
+body {
+  background-image: url("/public/img/i-like-food.svg");
+  background-color: rgb(255, 244, 227);
+}
+  
+a { color: var(--bs-dark); }
+
+/* Categody Card*/
+
+.category__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: 250ms all;
+}
+
+.category__link .rep-name{ 
+  font-size: 20px;
+
+}
+
+.category__link:hover {
+  transform: scale(1.07);
+}
+
+.category__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.category__img--large {
+  height: 330px;
+}
+
+.category__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.container p {
+  font-weight:400;
+  font-size: 21px; 
+  line-height: 1.7; 
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.container ul {
+  font-weight:400;
+  list-style-type: disc;
+}
+
+.container li {
+  font-size: 20px;
+  margin-bottom: 10px; 
+}
+
+.container .about-header {
+  margin-left: -5%;
+  padding-top: 30px;
+}
+
+
+.container .about-content h2{
+  margin-left: -5%;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 219, 175);
+}
+
+.landing-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  margin-right: 30px;
+}  
+
+.login-btn {
+  background-color: black;/* Set background color */
+  color: white; /* Set text color */
+  font-size: 24px; /* Set font size */
+  border: none;
+  ;
+}
+
+.login-btn:hover {
+  background-color:aquamarine; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+}
+
+.text-underline {
+  position: relative;
+}
+
+.text-underline::after {
+  content: "";
+  position: absolute;
+  border-radius: 20%;
+  left: 0;
+  bottom: 0px;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  height: 6px; /* Adjust the thickness of the underline */
+  background-color: black; /* Change the color of the underline */
+}
+
+.search-results-heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem; /* Adjust font size */
+  background-image: linear-gradient(to right, #f77977, #9b59b6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.favorite_container{
+  width: 100%;
+}
+
+.search-results-heading h2 {
+  margin: 0; /* Remove default margin for better alignment */
+}
+
+.search-results-heading img {
+  width: 30px; /* Adjust image width */
+  height: 30px; /* Adjust image height */
+  animation: spin 2s linear infinite;
+  /* Additional styling for icon appeal (optional): */
+  border-radius: 50%; /* Rounded icon */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  /* Adjust color or background-image based on your preference */
+  background-color: #fff; /* Or set a background color */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.search-icon {
+  margin-right: 10px; /* Adjust spacing between icon and heading */
+  font-size: 1.5rem; /* Adjust icon size */
+  color: inherit; /* Inherit color from heading */
+}
+
+.underline {
+  content: '';
+  display: block;
+  width: 100%; /* Adjust underline width */
+  height: 2px; /* Adjust underline thickness */
+  background-color: #f77977; /* Adjust underline color */
+  margin-top: 5px; /* Adjust underline position */
+}
+
+.search-results-heading.page-recipes-heading {
+  font-size: 2rem; /* Adjust font size */
+  background-image: linear-gradient(to right, #f77977, #9b59b6); /* Adjust gradient if needed */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-results-heading.page-recipes-heading .underline {
+  content: '';
+  display: block;
+  width: 100%; /* Adjust underline width */
+  height: 2px; /* Adjust underline thickness */
+  background-color: #f77977; /* Adjust underline color */
+  margin-top: 5px; /* Adjust underline position */
+}
+
+.heading {
+    color: #f77977;
+    animation: my-animation 3s ease-in-out infinite;
+  
+}
+
+.flag-icon {
+    margin-right: 1rem;
+}
+
+@keyframes my-animation {
+  from { color: #333; } /* Initial color */
+  to { color: #f77977; } /* Animated color change */
+}
+
+
+/* General Styles */
+.container-xxl {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* User Profile Icon Styles */
+.account-icon {
+  display: flex;
+}
+
+.user_profile{
+  color: black ;
+}
+
+.user_profile:hover{
+  color: whitesmoke;
+  background-color: black;
+}
+
+.recipe-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.refresh-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px auto 0 auto; /* Positioned to the right with some top margin */
+  display: flex;
+  align-items: center; /* Vertically centers icon and text */
+}
+
+.refresh-button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+.refresh-icon {
+  margin-right: 5px;
+  animation: spin 1s infinite linear; /* Rotates the icon continuously */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-label {
+  font-weight: bold;
+}
+
+.animate__animated.animate__infinite.animate__pulse { /* Override Animate.css pulse if used */
+  animation: none !important; /* Disable pulse animation if using another animation */
+}
+
+
+
+/* Profile Page Styles */
+
+/* Profile Heading Styles */
+.profile-name {
+  font-size: 2rem; /* Adjust font size */
+  color: #f77977; /* Color similar to #f77977 */
+  animation: label-animation 3s ease-in-out infinite; /* Animation applied */
+}
+
+/* Define the animation */
+@keyframes label-animation {
+  0% { color: #f77977; }
+  50% { color: #ff0000; } /* You can adjust the color stops as needed */
+  100% { color: #f77977; }
+}
+
+.underline {
+  content: '';
+  display: block;
+  width: 100%; /* Adjust underline width */
+  height: 2px; /* Adjust underline thickness */
+  background-color: #f77977; /* Adjust underline color */
+  margin-top: 5px; /* Adjust underline position */
+}
+
+/* Profile Container Styles */
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin-top: 50px;
+}
+
+/* Profile Form Styles */
+.profile-form {
+  margin-bottom: 20px;
+}
+
+/* Profile Field Styles */
+.profile-field {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5; /* Slightly darker background color */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items horizontally */
+  transition: background-color 0.3s;
+}
+
+.profile-field:hover {
+  background-color: #e0e0e0; /* Darker background color on hover */
+}
+
+/* Profile Label Styles */
+.profile-label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #f77977; /* Color similar to #f77977 */
+}
+
+/* Profile Icon Styles */
+.profile-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Profile Input Styles */
+.profile-input {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Profile Text Styles */
+.profile-text {
+  font-size: 16px;
+  color: #333;
+  margin-left: -100px;
+}
+
+/* Edit Field Styles */
+.edit-field {
+  display: flex;
+  align-items: center;
+}
+
+/* Edit Button Styles */
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Button Icon Styles */
+.btn-icon {
+  font-size: 20px;
+  margin-right: 0;
+}
+
+/* Password Input Container Styles */
+.password-input-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Password Toggle Button Styles */
+.password-toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
