@@ -1,5 +1,7 @@
+const bcrypt = require('bcrypt');
 const User = require('../models/userModel');
 
+// getUserProfile controller
 exports.getUserProfile = async (req, res) => {
   try {
     const userId = req.params.userId;
@@ -19,15 +21,20 @@ exports.updateUserProfile = async (req, res) => {
   try {
     const userId = req.params.userId;
     const { username, email, password } = req.body;
+
     // Validate request data
     if (!username || !email) {
       return res.status(400).json({ message: 'Username and email are required' });
     }
 
     const updateFields = { username, email };
+
+    // Check if password is provided and hash it
     if (password) {
-      updateFields.password = password; // Include password in update fields if provided
+      const hashedPassword = await bcrypt.hash(password, 10);
+      updateFields.password = hashedPassword; // Include hashed password in update fields
     }
+
     // Update user profile
     const updatedUser = await User.findByIdAndUpdate(userId, updateFields, { new: true });
     res.status(200).json({ message: 'User profile updated successfully', user: updatedUser });
@@ -36,3 +43,4 @@ exports.updateUserProfile = async (req, res) => {
     res.status(500).json({ message: 'Error updating user profile' });
   }
 };
+

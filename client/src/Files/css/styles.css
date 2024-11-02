@@ -263,6 +263,28 @@ a { color: var(--bs-dark); }
   border-color: #007bff;
 }
 
+@media screen and (max-width: 768px) {
+  .img-fluid{
+    width: 200px;
+  }
+  :root p {
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+
+  :root h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    margin-bottom: 1rem;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+}
+
 /* User Profile Icon Styles */
 .account-icon {
   display: flex;
@@ -455,4 +477,45 @@ a { color: var(--bs-dark); }
   border: none;
   cursor: pointer;
   margin-left: 10px;
+}
+
+
+/* User engagement icons*/
+
+.interaction-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interaction-button {
+  background: none;
+  border: none;
+  padding: 1rem; /* Decrease padding to reduce space */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Add transition for smooth expansion */
+  text-decoration: none;
+}
+
+.interaction-button:hover {
+  transform: scale(1.5); /* Slightly decrease the scale on hover */
+}
+
+.interaction-icon {
+  color: transparent;
+  stroke: black; /* Use stroke instead of fill to make only the edges black */
+  stroke-width: 55px; /* Increase the width of the stroke */
+  transition: stroke 5s ease; /* Add transition for smooth color change */
+}
+
+.interaction-icon.liked {
+  stroke: red; /* Change the color of the stroke to red */
+}
+
+.interaction-icon:hover {
+  stroke: red; /* Change the color of the stroke on hover */
+}
+
+.interaction-count {
+  margin-left: 0.5rem; /* Decrease space between the icon and the count */
 }

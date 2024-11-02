@@ -37,11 +37,17 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <div>
+        {/* Render CategoryList separately */}
+        <div className="container">
           <CategoryList />
+        </div>
+
+        {/* Render LatestList and RecipeList separately */}
+        <div className="container">
           <LatestList />
           <RecipeList />
         </div>
+
         <section className="px-4 py-5 my-5 text-center">
           <img src="/img/publish-recipe.png" className="d-block mx-auto mb-4 img-fluid" alt="Publish your recipe for FREE today" width="566" height="208" loading="lazy" />
           <h1 className="display-5 fw-bold">Publish your recipe for FREE today</h1>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from './Layout/authContext';
-import { FaHeart, FaTimes } from 'react-icons/fa'; // Import FaTimes for the remove icon
+import { FaHeart, FaTimes } from 'react-icons/fa'; 
 import { Link } from 'react-router-dom';
 
 function FavoritesPage() {
@@ -14,7 +14,7 @@ function FavoritesPage() {
     const fetchFavorites = async () => {
       try {
         if (!user || !user._id) {
-          console.log('User or userId is missing.'); // Add logging
+          console.log('User or userId is missing.'); 
           return;
         }
         const response = await axios.get(`http://localhost:8000/api/favorites/${user._id}`);
@@ -29,7 +29,8 @@ function FavoritesPage() {
     fetchFavorites();
   }, [user]);
 
-  const handleRemoveFavorite = async (recipeId) => {
+  const handleRemoveFavorite = async (event, recipeId) => {
+    event.preventDefault();
     try {
       await axios.delete('http://localhost:8000/api/favorites/remove', {
         data: {
@@ -37,11 +38,8 @@ function FavoritesPage() {
           recipeId: recipeId
         }
       });
-      // After successful removal, update the favoriteRecipes state to reflect the change
       setFavoriteRecipes(prevFavorites => prevFavorites.filter(favorite => favorite.recipe._id !== recipeId));
-      // Set remove message
       setRemoveMessage('Recipe removed from favorites.');
-      // Clear the remove message after 3 seconds
       setTimeout(() => {
         setRemoveMessage('');
       }, 2000);
@@ -63,11 +61,11 @@ function FavoritesPage() {
       <section className="page-recipes pb-4 pt-4">
         <div className='mb-5'>
           <h2 className="search-results-heading page-recipes-heading animated">
-            <FaHeart className="search-icon" /> {/* Replace with your chosen icon */}
+            <FaHeart className="search-icon" />
             Favorite Recipes
-            <div className="underline"></div> {/* Add the underline element */}
+            <div className="underline"></div>
           </h2>
-        </div>  
+        </div>
 
         {removeMessage && (
           <div className="alert alert-success mb-3" style={{ maxWidth: '500px', margin: '0 auto' }}>
@@ -81,16 +79,15 @@ function FavoritesPage() {
         ) : favoriteRecipes.length > 0 ? (
           <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             {favoriteRecipes.map(favorite => (
-              <div key={favorite.recipe._id} className="col text-center category__link">
+              <Link key={favorite.recipe._id} to={`/recipe/${favorite.recipe._id}`} className="col text-center category__link">
                 <div className="category__img category__img--large shadow">
                   <img src={`/uploads/${favorite.recipe.image}`} alt={favorite.recipe.name} loading="lazy" />
                 </div>
                 <div className="pt-1">{favorite.recipe.name}</div>
-                {/* Button/icon to remove favorite */}
-                <button onClick={() => handleRemoveFavorite(favorite.recipe._id)} className="btn btn-danger btn-sm mt-2">
+                <button onClick={(event) => handleRemoveFavorite(event, favorite.recipe._id)} className="btn btn-danger btn-sm mt-2">
                   <FaTimes /> Remove
                 </button>
-              </div>
+              </Link>
             ))}
           </div>
         ) : (

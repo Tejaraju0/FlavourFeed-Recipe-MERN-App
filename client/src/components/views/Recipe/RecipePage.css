@@ -13,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 .recipe-image {
@@ -154,4 +155,33 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+
+.social-links {
+  display: flex; /* Arrange links horizontally */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.social-links li {
+  margin-right: 10px; /* Add spacing between links */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242424; /* Adjust background color */
+  color: white; /* Adjust text color */
+  padding: 8px 12px; /* Adjust padding */
+  border-radius: 4px; /* Add rounded corners */
+  cursor: pointer; /* Indicate clickable elements */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.social-link:hover {
+  background: white; /* Background color on hover */
+  color: #242424; /* Text color on hover */
 }
