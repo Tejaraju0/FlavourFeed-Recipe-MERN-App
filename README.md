@@ -53,6 +53,7 @@ Follow these steps to set up and run FlavourFeed locally:
 ### Setup
 
 1. **Clone the Repository**:
+
    ```bash
    https://github.com/Tejaraju0/FavourFeed--Recipe_app-MERN-Project-.git
    cd FlavourFeed
@@ -60,34 +61,46 @@ Follow these steps to set up and run FlavourFeed locally:
 
 2. **Backend Setup**:
    - Navigate to the `server` folder:
+
      ```bash
      cd server
      ```
+
    - Install dependencies:
+
      ```bash
      npm install
      ```
+
    - Create a `.env` file and set up environment variables:
+
      ```plaintext
      MONGO_URI=your-mongodb-connection-string
      PORT=8000
      JWT_SECRET=your-jwt-secret
      ```
+
    - Start the server:
+
      ```bash
      npm run start
      ```
 
 3. **Frontend Setup**:
    - Navigate to the `client` folder:
+
      ```bash
      cd ../client
      ```
+
    - Install dependencies:
+
      ```bash
      npm install
      ```
+
    - Start the frontend server:
+
      ```bash
      npm start
      ```
