@@ -8,7 +8,7 @@ function AllCategoriesPage() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/fetchall'); // Change the URL to match your server endpoint
+        const response = await axios.get('https://flavourfeed-backend.onrender.com/api/fetchall'); // Change the URL to match your server endpoint
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);

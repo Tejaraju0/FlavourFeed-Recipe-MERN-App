@@ -12,7 +12,7 @@ function SignupPage() {
     event.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:8000/api/signup', {
+      const response = await axios.post('https://flavourfeed-backend.onrender.com/api/signup', {
         username,
         email,
         password

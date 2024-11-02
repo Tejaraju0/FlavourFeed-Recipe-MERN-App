@@ -14,7 +14,7 @@ function LoginPage() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/login', {
+      const response = await axios.post('https://flavourfeed-backend.onrender.com/api/login', {
         email,
         password
       });

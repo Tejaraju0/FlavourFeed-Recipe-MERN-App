@@ -18,7 +18,7 @@ function SearchResult() {
   const fetchSearchResults = async (searchTerm) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/search', { searchTerm });
+      const response = await axios.post('https://flavourfeed-backend.onrender.com/api/search', { searchTerm });
       setSearchResults(response.data);
       setLoading(false);
     } catch (error) {

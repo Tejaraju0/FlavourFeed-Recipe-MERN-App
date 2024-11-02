@@ -9,7 +9,7 @@ function ExploreRandom() {
 
   const fetchRandomRecipe = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/explore-random');
+      const response = await axios.get('https://flavourfeed-backend.onrender.com/api/explore-random');
       setRecipe(response.data.recipe);
       setLoading(false);
     } catch (error) {

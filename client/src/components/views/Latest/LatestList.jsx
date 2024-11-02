@@ -10,7 +10,7 @@ function LatestList() {
   useEffect(() => {
     const fetchLatestRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/latest'); 
+        const response = await axios.get('https://flavourfeed-backend.onrender.com/api/latest'); 
         setLatestRecipes(response.data.slice(0, 5));
         setLoading(false);
       } catch (error) {

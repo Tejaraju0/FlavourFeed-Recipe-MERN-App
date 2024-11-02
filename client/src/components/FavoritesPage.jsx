@@ -17,7 +17,7 @@ function FavoritesPage() {
           console.log('User or userId is missing.'); 
           return;
         }
-        const response = await axios.get(`http://localhost:8000/api/favorites/${user._id}`);
+        const response = await axios.get(`https://flavourfeed-backend.onrender.com/api/favorites/${user._id}`);
         setFavoriteRecipes(response.data.favorites);
         setLoading(false);
       } catch (error) {
@@ -32,7 +32,7 @@ function FavoritesPage() {
   const handleRemoveFavorite = async (event, recipeId) => {
     event.preventDefault();
     try {
-      await axios.delete('http://localhost:8000/api/favorites/remove', {
+      await axios.delete('https://flavourfeed-backend.onrender.com/api/favorites/remove', {
         data: {
           userId: user._id,
           recipeId: recipeId

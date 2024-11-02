@@ -10,7 +10,7 @@ function ChineseRecipesPage() {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/recipes'); // Replace with your actual API endpoint
+        const response = await axios.get('https://flavourfeed-backend.onrender.com/api/recipes'); // Replace with your actual API endpoint
         const chineseRecipes = response.data.filter(recipe => recipe.category === "Chinese");
         setRecipes(chineseRecipes);
         setLoading(false);

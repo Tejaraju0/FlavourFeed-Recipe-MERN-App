@@ -50,7 +50,7 @@ const SubmitRecipe = () => {
       }
 
       // Make POST request to submit recipe
-      const response = await axios.post('http://localhost:8000/api/submit-recipe', formData);
+      const response = await axios.post('https://flavourfeed-backend.onrender.com/api/submit-recipe', formData);
 
       // Handle success response
       setInfoSubmit(response.data.message);

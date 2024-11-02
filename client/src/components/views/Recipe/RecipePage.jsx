@@ -148,7 +148,7 @@ function RecipePage() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/recipes/${id}`);
+        const response = await axios.get(`https://flavourfeed-backend.onrender.com/api/recipes/${id}`);
         setRecipe(response.data);
         setLoading(false);
       } catch (error) {
@@ -179,7 +179,7 @@ function RecipePage() {
         recipeId: recipe._id
       };
 
-      await axios.post(`http://localhost:8000/api/favorites/add`, requestBody);
+      await axios.post(`https://flavourfeed-backend.onrender.com/api/favorites/add`, requestBody);
 
       navigate('/favorites/user:Id');
       const updatedFavorites = [...(sessionStorage.getItem('favorites') ? JSON.parse(sessionStorage.getItem('favorites')) : []), recipe];
