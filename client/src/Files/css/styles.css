@@ -9,6 +9,10 @@
 body {
   background-image: url("/public/img/i-like-food.svg");
   background-color: rgb(255, 244, 227);
+  transform: scale(0.5);
+  transform-origin: top left;
+  width: 200%;
+  overflow-x: hidden; 
 }
   
 a { color: var(--bs-dark); }
