@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import ShareIcon from '@material-ui/icons/Share';
+import ShareIcon from '@mui/icons-material/Share';
 
 const ShareButton = forwardRef(({ isActive, ariaLabel, onClick, ...props }, ref) => {
   return (

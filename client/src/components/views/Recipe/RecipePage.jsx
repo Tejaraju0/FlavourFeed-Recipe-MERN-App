@@ -4,16 +4,16 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Layout/authContext';
 import './RecipePage.css';
 import { Link } from 'react-router-dom';
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import SmsIcon from "@material-ui/icons/Sms";
-import ShareIcon from "@material-ui/icons/Share";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import SmsIcon from '@mui/icons-material/Sms';
+import ShareIcon from '@mui/icons-material/Share';
 import ShareButton from './ShareButton';
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import { PDFDownloadLink, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const socials = [
@@ -80,7 +80,7 @@ const socials = [
 }
 ];
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = styled((theme) => ({
   // Styles for the sharing components
   container: {
     display: 'flex',
