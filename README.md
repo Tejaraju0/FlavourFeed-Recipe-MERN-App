@@ -1,4 +1,4 @@
-
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://github.com/Tejaraju0/FlavourFeed-Recipe-MERN-App)  
 # FlavourFeed
 
 **Discover, share, and explore a world of culinary delights. FlavourFeed is a platform where food enthusiasts can find, create, and share recipes from diverse cultures and cuisines.**
